@@ -12,7 +12,7 @@ export function PokemonRow({ pokemon }: { pokemon: PokemonType }) {
         <Typography>{pokemon.name}</Typography>
       </Grid>
       <Grid item xs={3}>
-        <Typography>{pokemon.types.join(', ')}</Typography>
+        <Typography>{pokemon.types}</Typography>
       </Grid>
       <Grid item xs={3}>
         <Avatar alt={pokemon.name} src={pokemon.sprite} sx={{ width: 48, height: 48 }} />

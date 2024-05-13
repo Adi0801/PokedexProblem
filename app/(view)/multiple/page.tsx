@@ -27,10 +27,10 @@ function MultipleView() {
 
   return (
     <div className="max-w-md mx-auto">
-      <Typography variant="h3" component="h1" className="text-3xl font-bold mb-4">Search Pokemon</Typography>
+      <Typography variant="h3" component="h1"  color= "green"  className="text-3xl font-bold mb-5 mu">Search Pokemon</Typography>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label htmlFor="names" className="block mb-1">Names (comma separated):</label>
+          <label htmlFor="names" className="block mb-1">Pokemon-Name:</label>
           <TextField
             type="text"
             id="names"
@@ -39,7 +39,7 @@ function MultipleView() {
             onChange={handleChange}
             fullWidth
             variant="outlined"
-            placeholder="Enter Pokemon Names (comma separated)"
+            placeholder="Enter Pokemon Names"
           />
         </div>
         <Button
@@ -56,7 +56,7 @@ function MultipleView() {
           <PokemonRow key={pokemon.id} pokemon={pokemon} />
         ))
       ) : (
-        <Typography variant="body1" className="text-red-500">No Pokemon found for the provided names.</Typography>
+        <Typography variant="body1" className="text-red-500">Please provide correct pokemon name.</Typography>
       )}
     </div>
   );

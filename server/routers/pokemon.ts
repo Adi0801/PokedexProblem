@@ -43,7 +43,7 @@ export const PokemonRouter = router({
         return pokemons;
 
     }),
-    addPokemon:procedure.input(z.object({name:z.string(),types:z.array(z.string()),sprite:z.string()}))
+    addPokemon:procedure.input(z.object({name:z.string(),types:z.string(),sprite:z.string()}))
     .mutation(async (opts) => {
         const {input} = opts;
         await prisma.pokemon.create({
